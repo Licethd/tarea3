@@ -1,0 +1,41 @@
+{
+  "name": "tripulante-contract-testing",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "config": {
+    "pact_do_not_track": true
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "mocha --timeout 10000"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "stream": "0.0.2"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^10.0.0-beta.25",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "chai": "^4.3.8",
+    "mocha": "^10.2.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
