@@ -1,0 +1,61 @@
+{
+  "consumer": {
+    "name": "react-cargo"
+  },
+  "interactions": [
+    {
+      "description": "una solicitud para crear un Cargo",
+      "providerStates": [
+        {
+          "name": "crear cargo"
+        }
+      ],
+      "request": {
+        "body": {
+          "Descripcion": "Piloto"
+        },
+        "headers": {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+        "method": "POST",
+        "path": "/api/cargo/registro"
+      },
+      "response": {
+        "body": "\"6cc5f70e-ba09-4df7-a757-7adfe2d4a500\"",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "10.4.1"
+    },
+    "pactRust": {
+      "ffi": "0.4.0",
+      "models": "1.0.4"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "cargo-service"
+  }
+}

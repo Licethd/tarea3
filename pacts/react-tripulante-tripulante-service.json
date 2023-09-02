@@ -1,0 +1,68 @@
+{
+    "consumer": {
+      "name": "react-tripulante"
+    },
+    "interactions": [
+      {
+        "description": "una solicitud para crear un Tripulante",
+        "providerStates": [
+          {
+            "name": "crear tripulante"
+          }
+        ],
+        "request": {
+          "body": {
+            "Apellido": "Torrez",
+            "EmailAddress": "juani@gmail.com",
+            "Estado": "1",
+            "HorasVuelo": 300,
+            "KeyCargo": "a9c9403f-b83f-4631-8203-cb01e635dd12",
+            "Nombre": "Juanita",
+            "NroMillas": 3556,
+            "Tipo": "AIRE"
+          },
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          },
+          "method": "POST",
+          "path": "/api/tripulante/registro"
+        },
+        "response": {
+          "body": "\"6cc5f70e-ba09-4df7-a757-7adfe2d4a360\"",
+          "headers": {
+            "Content-Type": "application/json"
+          },
+          "matchingRules": {
+            "body": {
+              "$": {
+                "combine": "AND",
+                "matchers": [
+                  {
+                    "match": "type"
+                  }
+                ]
+              }
+            },
+            "header": {}
+          },
+          "status": 200
+        }
+      }
+    ],
+    "metadata": {
+      "pact-js": {
+        "version": "10.4.1"
+      },
+      "pactRust": {
+        "ffi": "0.4.0",
+        "models": "1.0.4"
+      },
+      "pactSpecification": {
+        "version": "3.0.0"
+      }
+    },
+    "provider": {
+      "name": "tripulante-service"
+    }
+  }

@@ -15,7 +15,7 @@ function App() {
   const [KeyCargo, setKeyCargo] = useState('');
   const crearTripulanteClick = () => {
     console.log('Crear Tripulante');
-    (new TripulanteService('http://localhost:8080')).crearTripulante(Nombre, Apellido, EmailAddress, Estado, Tipo, HorasVuelo, NroMillas, KeyCargo).then((id) => {
+    (new TripulanteService('http://localhost:80')).crearTripulante(Nombre, Apellido, EmailAddress, Estado, Tipo, HorasVuelo, NroMillas, KeyCargo).then((id) => {
       alert('Ttripulante creado con id: ' + id);
     }).catch((error) => {
       console.log(error);
